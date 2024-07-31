@@ -10,21 +10,21 @@ require_once 'ti.php';
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>desarrollo web entorno servidor</title>
+        <title>MVC model</title>
         <style>
             body {
-                font-family: Georgia, 'Times New Roman', Times, serif;
                 margin: 0;
                 padding: 0;
                 background-color: black;
+                font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
             header {
                 margin-top: 10px;
-                display: flex;
-                justify-content: center;
                 background-color: green;
                 color: white;
+                display: flex;
+                justify-content: center;
             }
 
             nav {
@@ -33,10 +33,10 @@ require_once 'ti.php';
             }
 
             nav a {
-                color: white;
-                text-decoration: none;
                 padding: 5px;
                 margin: 5px;
+                color: white;
+                text-decoration: none;
                 transition: background-color 0.3s;
             }
 
@@ -89,26 +89,25 @@ require_once 'ti.php';
             }
 
             section {
-                max-width: 800px;
                 margin: 10px;
+                max-width: 800px;
             }
 
             footer {
-                background-color: green;
-                padding: 10px;
-                text-align: center;
-                color: white;
-                position: fixed;
-                bottom: 0;
+                bottom: 0px;
                 width: 100%;
+                background-color: green;
+                color: white;
+                text-align: center;
+                position: fixed;
             }
 
             form {
+                margin: 0 auto;
+                max-width: 400px;
                 color: white;
                 display: flex;
                 flex-direction: column;
-                max-width: 400px;
-                margin: 0 auto;
             }
 
             label {
@@ -116,8 +115,8 @@ require_once 'ti.php';
             }
 
             input, textarea {
-                padding: 8px;
                 margin-bottom: 16px;
+                padding: 8px;
                 border: 1px solid #ccc;
                 border-radius: 10px;
                 box-sizing: border-box;
@@ -164,11 +163,8 @@ require_once 'ti.php';
         </header>
         <nav>
             <a href="/dwes/dwes05/index.php">inicio</a>
-            <a href="#">videoconsolas</a>
-            <a href="#">videojuegos</a>
             <a href="/dwes/dwes05/index.php/sugerencias">sugerencias</a>
             <a href="/dwes/dwes05/index.php/registro">registro</a>
-            <a href="#">contacto</a>
         </nav>
         <section>
         <?php startblock('contenido'); ?> <?php endblock()?>
