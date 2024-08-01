@@ -12,19 +12,39 @@ require_once 'ti.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MVC model</title>
         <style>
+            html,
             body {
-                margin: 0;
-                padding: 0;
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            body {
                 background-color: black;
-                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            h1,
+            h2 {
+                margin-left: 10px;
+                color: #FFFFFF;
+                font-weight: normal;
             }
 
             header {
                 margin-top: 10px;
-                background-color: green;
-                color: white;
+                margin-right: 10px;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end;
+            }
+
+            main {
+                margin-bottom: 10px;
+                flex: 1;
             }
 
             nav {
@@ -48,11 +68,12 @@ require_once 'ti.php';
                 color: white;
             }
 
-            #head {
+            #title {
                 margin-top: 10px;
-                margin-right: 10px;
+                background-color: green;
+                color: white;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
             }
 
             .home,
@@ -94,13 +115,11 @@ require_once 'ti.php';
             }
 
             footer {
-                bottom: 0px;
-                width: 100%;
-                background-color: green;
-                color: white;
-                text-align: center;
-                position: fixed;
-            }
+            width: 100%;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
 
             form {
                 margin: 0 auto;
@@ -153,22 +172,24 @@ require_once 'ti.php';
     </script>
     </head>
     <body>
-        <div id="head">
+        <header>
             <button class="doc" onclick="goDoc()">doc</button>
             <button class="git" onclick="goGit()">git</button>
             <button class="home" onclick="goHome()">back</button>
-        </div>
-        <header>
-            <h1>TIENDA</h1>
         </header>
-        <nav>
-            <a href="/dwes/dwes05/index.php">inicio</a>
-            <a href="/dwes/dwes05/index.php/sugerencias">sugerencias</a>
-            <a href="/dwes/dwes05/index.php/registro">registro</a>
-        </nav>
-        <section>
-        <?php startblock('contenido'); ?> <?php endblock()?>
-        </section>
+        <main>
+            <div id="title">
+                <h1>TIENDA</h1>
+            </div>
+            <nav>
+                <a href="/dwes/dwes05/index.php">inicio</a>
+                <a href="/dwes/dwes05/index.php/sugerencias">sugerencias</a>
+                <a href="/dwes/dwes05/index.php/registro">registro</a>
+            </nav>
+            <section>
+                <?php startblock('contenido'); ?> <?php endblock()?>
+            </section>
+        </main>
         <footer>
             <?php startblock('pie'); ?>
             <p>desarrollo web entorno servidor</p>
